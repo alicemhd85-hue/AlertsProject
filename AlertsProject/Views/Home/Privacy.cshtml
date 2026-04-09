@@ -1,0 +1,28 @@
+﻿@{
+    ViewData["Title"] = "search using error code";
+}
+<h1>@ViewData["Title"]</h1>
+<style>
+body {
+    font-family: "Segoe UI", Tahoma;
+    background: #f4f6f9;
+    margin: 0;
+    padding: 0;
+}
+
+   
+</style>
+<p>Use this page to put the error code and show the details</p>
+<form asp-action="Search" method="post">
+    <div class="form-group">
+        <label for="errorCode">Enter Error Code:</label>
+        <input type="text" id="errorCode" name="errorCode" class="form-control" placeholder="Error Code" />
+    </div>
+
+    <button type="submit" class="btn btn-primary">Search</button>
+</form>
+
+@if (!string.IsNullOrEmpty(ViewBag.Message))
+{
+    <p class="text-danger">@ViewBag.Message</p>
+}

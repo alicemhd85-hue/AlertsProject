@@ -1,0 +1,39 @@
+﻿@model AlertsProject.Models.AlertsTable
+@{
+    ViewData["Title"] = "Add new Error";
+}
+
+<h1>@ViewData["Title"]</h1>
+<p>Use this page to add new Error to database</p>
+
+<form asp-action="Create" method="post">
+    <div>
+        <label asp-for="اسمالخطأ">Error Name</label>
+        <input asp-for="اسمالخطأ" class="form-control" />
+        <span asp-validation-for="اسمالخطأ" class="text-danger"></span>
+    </div>
+
+    <div>
+        <label asp-for="رمزالخطأ">Error Code</label>
+        <input asp-for="رمزالخطأ" class="form-control" />
+        <span asp-validation-for="رمزالخطأ" class="text-danger"></span>
+    </div>
+
+    <div>
+        <label asp-for="شرحمختصر">short description</label>
+        <input asp-for="شرحمختصر" class="form-control" />
+        <span asp-validation-for="شرحمختصر" class="text-danger"></span>
+    </div>
+
+    <div>
+        <label asp-for="نوعالخطأ">Error type</label>
+        <input asp-for="نوعالخطأ" class="form-control" />
+        <span asp-validation-for="نوعالخطأ" class="text-danger"></span>
+    </div>
+
+    <button type="submit">save</button>
+</form>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

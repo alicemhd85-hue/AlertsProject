@@ -1,0 +1,32 @@
+﻿@model AlertsTable
+
+@{
+    ViewBag.Title = "Error Details";
+}
+
+<h2>Error Details</h2>
+
+<table class="table table-bordered">
+    <tr>
+        <th>رمز الخطأ</th>
+        <td>@Model.رمزالخطأ</td>
+    </tr>
+    <tr>
+        <th>شرح مختصر</th>
+        <td>@Model.شرحمختصر</td>
+    </tr>
+    <tr>
+        <th>اسم الخطأ</th>
+        <td>@Model.اسمالخطأ</td>
+    </tr>
+    <tr>
+        <th>نوع الخطأ</th>
+        <td>@Model.نوعالخطأ</td>
+    </tr>
+    <tr>
+        <th>رابط مساعدة</th>
+        <td><a href="https://stackoverflow.com/questions/48626500/what-is-received-close-notify-during-handshake-error" target="_blank">اضغط للحصول على معلومات أكثر</a></td>
+    </tr>
+</table>
+
+<a href="@Url.Action("SearchName", "Home")" class="btn btn-secondary">Back to Search</a>
